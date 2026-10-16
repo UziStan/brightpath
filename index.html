@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#3156a6">
+<title>BrightPath Practice | Grades 3–8</title>
+<style>
+:root{--ink:#17233c;--muted:#63708a;--blue:#3156a6;--blue2:#eaf0ff;--mint:#dff7ec;--gold:#fff3cf;--rose:#ffe7e7;--paper:#f5f7fb;--line:#dfe5f0;--white:#fff;--shadow:0 12px 35px #20335a12}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}button,select,input{font:inherit}button{cursor:pointer;border:0;border-radius:12px;padding:12px 16px;font-weight:700;transition:.15s}button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid #91b5ff;outline-offset:2px}.primary{background:var(--blue);color:white}.secondary{background:var(--blue2);color:var(--blue)}.plain{background:#eef1f7;color:var(--ink)}button:disabled{opacity:.45;cursor:not-allowed}.wrap{max-width:1050px;margin:auto;padding:22px}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:22px}.brand{display:flex;align-items:center;gap:12px}.logo{width:46px;height:46px;display:grid;place-items:center;background:var(--blue);color:#fff;border-radius:15px;font-size:24px}.brand h1{font-size:20px;margin:0;line-height:1.15}.brand p{margin:4px 0 0;color:var(--muted);font-size:13px}.pill{font-size:12px;background:#e5f6ee;color:#176747;border-radius:99px;padding:7px 10px;font-weight:800}.hero{background:linear-gradient(120deg,#3156a6,#5777c7);color:#fff;border-radius:24px;padding:28px;margin-bottom:20px;box-shadow:var(--shadow)}.hero h2{font-size:clamp(26px,4vw,38px);line-height:1.12;margin:0 0 10px}.hero p{max-width:670px;margin:0;color:#e8edff}.card{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow);margin-bottom:18px}.section-title{font-size:18px;margin:0 0 14px}.field-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.field{display:flex;flex-direction:column;gap:7px}.field label,.label{font-weight:750;font-size:14px}.field select,.field input{width:100%;border:1px solid #cbd4e5;border-radius:11px;padding:12px;background:#fff;color:var(--ink)}.grade-grid,.choice-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px}.grade{background:#f2f5fb;color:var(--ink);border:1px solid var(--line);padding:13px 5px}.grade.active{background:var(--blue2);border:2px solid var(--blue);color:var(--blue)}.subject-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.subject{border:1px solid var(--line);background:#fff;text-align:left;padding:16px;min-height:115px}.subject.active{border:2px solid var(--blue);background:#f3f6ff}.subject .emoji{font-size:24px;display:block;margin-bottom:8px}.subject strong{display:block}.subject small{color:var(--muted);display:block;margin-top:3px}.option-row{display:flex;flex-wrap:wrap;gap:8px}.option{background:#f2f5fb;border:1px solid var(--line);color:var(--ink);padding:10px 14px}.option.active{background:var(--blue2);border:2px solid var(--blue);color:var(--blue)}.checks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.check{display:flex;gap:9px;align-items:flex-start;background:#f7f9fd;border:1px solid var(--line);padding:12px;border-radius:12px}.check input{margin-top:5px;accent-color:var(--blue)}.muted{color:var(--muted)}.tiny{font-size:12px}.full{width:100%}.hidden{display:none!important}.practice-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.timer{font-variant-numeric:tabular-nums;background:#fff3cf;color:#765200;padding:8px 12px;border-radius:11px;font-weight:850}.progress{height:8px;background:#e9edf5;border-radius:99px;overflow:hidden;margin:15px 0}.progress span{height:100%;display:block;background:var(--blue);width:0;transition:width .2s}.question-count{color:var(--muted);font-weight:700;font-size:13px}.question{font-size:clamp(20px,3vw,27px);line-height:1.3;margin:18px 0}.answers{display:grid;gap:10px}.answer{display:flex;align-items:center;gap:12px;text-align:left;background:#fff;border:1.5px solid var(--line);color:var(--ink);padding:14px;border-radius:14px;font-weight:600}.letter{display:grid;place-items:center;min-width:32px;height:32px;border-radius:10px;background:#eef1f7;color:#485775}.answer.selected{border-color:var(--blue);background:#f1f5ff}.answer.correct{border-color:#27946b;background:#e6f8ef}.answer.wrong{border-color:#d35b5b;background:#fff0f0}.feedback{padding:15px;border-radius:14px;margin-top:16px}.feedback.good{background:var(--mint)}.feedback.bad{background:var(--rose)}.feedback h3{margin:0 0 5px;font-size:16px}.feedback p{margin:0}.qnav{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:20px}.qnav .right{display:flex;gap:8px}.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.stat{background:#f6f8fc;border:1px solid var(--line);border-radius:14px;padding:15px}.stat strong{display:block;font-size:26px}.stat span{font-size:12px;color:var(--muted)}.review-item{border:1px solid var(--line);border-radius:14px;padding:15px;margin-top:10px}.review-item h4{margin:0 0 8px}.review-item p{margin:5px 0}.tag{display:inline-block;padding:4px 8px;border-radius:99px;background:#eef1f7;font-size:12px;font-weight:800}.tag.good{background:var(--mint);color:#176747}.tag.bad{background:var(--rose);color:#a32e2e}.footer{text-align:center;color:var(--muted);font-size:12px;padding:12px 0 24px}.saved-row{display:flex;justify-content:space-between;align-items:center;gap:10px}.topic-list{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}.topic-list span{font-size:12px;background:#fff;border:1px solid var(--line);border-radius:99px;padding:5px 9px}
+@media(max-width:650px){.wrap{padding:13px}.hero{padding:22px}.card{padding:17px}.field-grid{grid-template-columns:1fr}.grade-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.subject-grid{grid-template-columns:1fr}.subject{min-height:0}.checks{grid-template-columns:1fr}.stats{grid-template-columns:repeat(3,minmax(0,1fr))}.stat{padding:11px}.stat strong{font-size:22px}.top{align-items:flex-start}.pill{display:none}.qnav{align-items:stretch}.qnav button{padding:11px 12px}}
+@media print{body{background:white}.top,.hero,.no-print,#setup,#practice{display:none!important}#results{display:block!important}.card{box-shadow:none;border:0}.wrap{max-width:none;padding:0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="brand"><div class="logo" aria-hidden="true">✦</div><div><h1>BrightPath Practice</h1><p>Learn a little. Grow a lot.</p></div></div>
+  <span class="pill">GRADES 3–8 · CANADA</span>
+</header>
+<section class="hero">
+  <h2>Small steps. Strong skills.</h2>
+  <p>Practice maths, numerical reasoning and verbal skills with friendly explanations designed for learners in Grades 3–8. Choose a topic, set your pace and learn from every answer.</p>
+</section>
+
+<section id="setup" class="card">
+  <h2 class="section-title">1. Choose your grade</h2>
+  <div class="grade-grid" id="grades">
+    <button class="grade" data-grade="3">Grade 3</button><button class="grade" data-grade="4">Grade 4</button><button class="grade active" data-grade="5">Grade 5</button><button class="grade" data-grade="6">Grade 6</button><button class="grade" data-grade="7">Grade 7</button><button class="grade" data-grade="8">Grade 8</button>
+  </div>
+  <h2 class="section-title" style="margin-top:24px">2. Choose a subject</h2>
+  <div class="subject-grid" id="subjects">
+    <button class="subject active" data-subject="math"><span class="emoji">🔢</span><strong>Maths</strong><small>Numbers, fractions, geometry and more</small></button>
+    <button class="subject" data-subject="quant"><span class="emoji">🧠</span><strong>Quantitative Aptitude</strong><small>Patterns, numerical logic and problem-solving</small></button>
+    <button class="subject" data-subject="verbal"><span class="emoji">📚</span><strong>Verbal Aptitude</strong><small>Vocabulary, grammar and reading</small></button>
+  </div>
+  <div class="field-grid" style="margin-top:22px">
+    <div class="field"><label for="topic">3. Topic</label><select id="topic"><option value="all">All topics</option></select></div>
+    <div class="field"><label for="difficulty">4. Difficulty</label><select id="difficulty"><option value="mixed">Mixed</option><option value="easy">Easy</option><option value="medium">Medium</option><option value="hard">Challenge</option></select></div>
+  </div>
+  <h2 class="section-title" style="margin-top:24px">5. Session length</h2>
+  <div class="option-row" id="counts"><button class="option" data-count="10">10 questions</button><button class="option active" data-count="20">20 questions</button><button class="option" data-count="30">30 questions</button><button class="option" data-count="50">50 questions</button><button class="option" data-count="100">100 questions</button></div>
+  <div class="field-grid" style="margin-top:18px">
+    <div class="field"><label for="timer">6. Time limit</label><select id="timer"><option value="0">Untimed</option><option value="5">5 minutes</option><option value="10">10 minutes</option><option value="15" selected>15 minutes</option><option value="20">20 minutes</option><option value="30">30 minutes</option><option value="45">45 minutes</option><option value="60">60 minutes</option></select><span class="tiny muted" id="timerHint">A flexible timer is a practice aid, not a grade-level standard.</span></div>
+    <div class="field"><label for="mode">7. Marking mode</label><select id="mode"><option value="instant">Learning mode — feedback after each answer</option><option value="exam">Exam mode — score at the end</option></select></div>
+  </div>
+  <div style="margin-top:22px"><button class="primary full" id="start">Start practice →</button><p class="tiny muted" style="margin:10px 0 0">No account required. Practice history stays in this browser on this device.</p></div>
+</section>
+
+<section id="practice" class="card hidden" aria-live="polite">
+  <div class="practice-head"><div><div class="question-count" id="sessionLabel">Grade 5 · Maths</div><h2 class="section-title" style="margin:3px 0 0" id="practiceTitle">Practice session</h2></div><div class="timer" id="clock">15:00</div></div>
+  <div class="progress"><span id="progressBar"></span></div>
+  <div class="saved-row"><span class="question-count" id="qNumber">Question 1 of 20</span><span class="question-count" id="answeredCount">0 answered</span></div>
+  <div id="questionText" class="question"></div>
+  <div id="answers" class="answers"></div>
+  <div id="feedback" class="feedback hidden"></div>
+  <div class="qnav"><button class="plain" id="flag">☆ Mark for review</button><div class="right"><button class="secondary" id="prev">← Back</button><button class="primary" id="next">Next →</button></div></div>
+  <div id="examHint" class="tiny muted" style="margin-top:12px">Exam mode: explanations appear after you submit.</div>
+</section>
+
+<section id="results" class="card hidden">
+  <div class="saved-row"><div><span class="tag good">SESSION COMPLETE</span><h2 style="margin:10px 0 4px">Look how far you've come!</h2><p class="muted" id="resultSubtitle" style="margin:0"></p></div><span style="font-size:36px" aria-hidden="true">🏆</span></div>
+  <div class="stats" style="margin-top:20px"><div class="stat"><strong id="scoreStat">0%</strong><span>Score</span></div><div class="stat"><strong id="correctStat">0/0</strong><span>Correct answers</span></div><div class="stat"><strong id="timeStat">0:00</strong><span>Time used</span></div></div>
+  <div style="margin-top:18px"><h3 style="margin-bottom:5px">A learning tip</h3><p id="learningTip" class="muted" style="margin-top:0"></p><div id="topicStats" class="topic-list"></div></div>
+  <div class="no-print" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:20px"><button class="primary" id="retryWrong">Practise missed questions</button><button class="secondary" id="print">Print / save results</button><button class="plain" id="home">New practice</button></div>
+  <h3 style="margin-top:25px">Answer review</h3><div id="review"></div>
+</section>
+<div class="footer">BrightPath Practice · Made for family learning · Questions are original practice examples, not official provincial test questions.</div>
+</div>
+<script>
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const state={grade:5,subject:"math",count:20,questions:[],index:0,answers:{},flagged:new Set(),mode:"instant",limit:15,started:0,remaining:0,tick:null,finished:false};
+const subjectNames={math:"Maths",quant:"Quantitative Aptitude",verbal:"Verbal Aptitude"};
+const topics={
+ math:["Number operations","Fractions and decimals","Patterns and algebra","Geometry and measurement","Data and probability","Word problems"],
+ quant:["Number patterns","Numerical reasoning","Logic and problem-solving","Tables and data","Word problems"],
+ verbal:["Vocabulary","Synonyms and antonyms","Grammar and sentences","Analogies","Reading comprehension","Spelling"]
+};
+const bank=[];
+function add(g,s,t,q,opts,a,exp,d="medium"){bank.push({g,s,t,q,opts,a,exp,d})}
+function mc(g,s,t,q,opts,a,exp,d){add(g,s,t,q,opts,a,exp,d)}
+// Original question bank: each grade, subject and several topic types. More rounds are created by shuffling this bank.
+for(let g=3;g<=8;g++){
+ let n= g+4;
+ mc(g,"math","Number operations",`What is ${n*3} + ${n*2}?`,[String(n*4),String(n*5),String(n*6),String(n*3)],1,`${n*3} + ${n*2} = ${n} × 5 = ${n*5}.`,"easy");
+ mc(g,"math","Number operations",`What is ${g+5} × ${g+3}?`,[String((g+5)+(g+3)),String((g+5)*(g+3)),String((g+5)*(g+2)),String((g+5)*g)],1,`Multiply ${g+5} by ${g+3}: the answer is ${(g+5)*(g+3)}.`,"easy");
+ mc(g,"math","Number operations",`A library has ${g*24} books and lends out ${g*7}. How many remain?`,[String(g*17),String(g*31),String(g*24+g*7),String(g*7)],0,`Subtract the books lent out: ${g*24} − ${g*7} = ${g*17}.`,"medium");
+ mc(g,"math","Fractions and decimals",`Which fraction is equivalent to ${g%2===0?"2/4":"3/6"}?`,["1/3","1/2","2/3","3/4"],1,"Both numerator and denominator can be divided by the same number. 2/4 and 3/6 each simplify to 1/2.","easy");
+ mc(g,"math","Fractions and decimals",`What is ${g+2}.5 + 1.25?`,[String((g+2)+1.75),String((g+2)+3.75),String((g+2)+1.25),String((g+2)+2.25)],0,`Line up the decimal points: ${(g+2.5+1.25).toFixed(2)}.`,"medium");
+ mc(g,"math","Patterns and algebra",`Find the next number: ${g}, ${g+3}, ${g+6}, ${g+9}, …`,[String(g+10),String(g+11),String(g+12),String(g+15)],2,"The pattern increases by 3 each time.","easy");
+ mc(g,"math","Geometry and measurement",`A rectangle is ${g+3} cm long and 4 cm wide. What is its perimeter?`,[String((g+3)*4),String(2*((g+3)+4)),String(g+7),String((g+3)*4+4)],1,`Perimeter = 2 × (length + width) = 2 × (${g+3} + 4) = ${2*(g+7)} cm.`,"medium");
+ mc(g,"math","Data and probability",`A bag has 3 red, 2 blue and 5 green counters. What is the probability of choosing a blue counter?`,["1/2","1/5","2/5","3/10"],1,"There are 10 counters in total and 2 are blue, so 2/10 simplifies to 1/5.","medium");
+ mc(g,"math","Word problems",`A notebook costs $${g+2}. How much do ${g%3+3} notebooks cost?`,[`$${(g+2)*(g%3+3)}`,`$${g+2+g%3+3}`,`$${(g+2)*2}`,`$${(g+2)*(g%3+4)}`],0,"Multiply the price of one notebook by the number of notebooks.","easy");
+ mc(g,"quant","Number patterns",`What comes next: ${g+1}, ${(g+1)*2}, ${(g+1)*3}, ${(g+1)*4}, …`,[String((g+1)*5),String((g+1)*6),String((g+1)*4+2),String((g+1)*3)],0,"Each term is the next multiple of the same number.","easy");
+ mc(g,"quant","Numerical reasoning",`A team scores ${g+2}, ${g+4} and ${g+6} points in three rounds. What is the average?`,[String(g+3),String(g+4),String(g+5),String(g+6)],1,"The numbers are evenly spaced, so the average is the middle value.","medium");
+ mc(g,"quant","Logic and problem-solving",`Mia is older than Noah. Noah is older than Lee. Who is the youngest?`,["Mia","Noah","Lee","Cannot tell"],2,"If Mia > Noah and Noah > Lee in age, Lee is the youngest.","easy");
+ mc(g,"quant","Tables and data",`A class reads ${g+2}, ${g+5} and ${g+8} books over three weeks. How many books altogether?`,[String(3*g+12),String(3*g+15),String(g+15),String(2*g+10)],0,"Add the three weeks together to find the total.","medium");
+ mc(g,"quant","Word problems",`A bus has ${g*5} seats. If ${g*3} seats are occupied, how many are empty?`,[String(g*2),String(g*8),String(g*3),String(g*5)],0,`Empty seats = ${g*5} − ${g*3} = ${g*2}.`,"easy");
+ mc(g,"verbal","Vocabulary",`Which word is closest in meaning to “rapid”?`,["Slow","Quick","Quiet","Careful"],1,"“Rapid” means fast or quick.","easy");
+ mc(g,"verbal","Synonyms and antonyms",`Which word is the opposite of “generous”?`,["Kind","Giving","Selfish","Helpful"],2,"“Selfish” is an opposite of “generous,” which means willing to give or share.","medium");
+ mc(g,"verbal","Grammar and sentences",`Choose the correctly written sentence.`,["They was going home.","They were going home.","They is going home.","They be going home."],1,"“They” takes the plural verb “were” in this past-tense sentence.","easy");
+ mc(g,"verbal","Analogies",`Bird is to nest as bee is to …`,["Web","Hive","Burrow","Stable"],1,"A nest is a bird's home; a hive is a bee's home.","easy");
+ mc(g,"verbal","Reading comprehension",`Read: “Sam packed a raincoat because dark clouds covered the sky.” Why did Sam pack a raincoat?`,["It was sunny","He expected rain","He was going swimming","He lost his coat"],1,"Dark clouds can signal rain, so Sam prepared for wet weather.","easy");
+ mc(g,"verbal","Spelling",`Which word is spelled correctly?`,["Neccessary","Necesary","Necessary","Necessery"],2,"The correct spelling is “necessary.”","medium");
+}
+// Add grade-scaled challenge questions with explicit algebra/percentages.
+for(let g=3;g<=8;g++){
+ const pct=(g+2)*5;
+ mc(g,"math","Patterns and algebra",`If x + ${g+4} = ${g+12}, what is x?`,[String(4),String(6),String(8),String(10)],2,`Subtract ${g+4} from both sides: x = ${(g+12)-(g+4)}.`,"medium");
+ mc(g,"math","Word problems",`A jacket costs $${g*10}. It is discounted by 10%. What is the discount?`,[`$${g}`,`$${g/10}`,`$${g*2}`,`$${g*10-10}`],0,`10% means one tenth. One tenth of $${g*10} is $${g}.`,"hard");
+ mc(g,"quant","Numerical reasoning",`A recipe uses 2 cups of flour for 8 muffins. At the same rate, how many cups are needed for ${g+4} muffins?`,[String((g+4)/4),String((g+4)/2),String((g+4)*2),String((g+4)/8)],0,`The recipe uses 1/4 cup per muffin, so ${g+4} muffins need ${(g+4)/4} cups.`,"hard");
+ mc(g,"verbal","Grammar and sentences",`Choose the best word: “Neither of the answers ___ correct.”`,["are","were","is","be"],2,"In formal standard English, “neither” is treated as singular here, so use “is”.","hard");
+}
+const topicFor = s=>topics[s];
+function refreshTopics(){const sel=$("#topic");sel.innerHTML='<option value="all">All topics</option>';topicFor(state.subject).forEach(t=>{const o=document.createElement("option");o.value=t;o.textContent=t;sel.append(o)})}
+function updateActive(group,attr,value){$$(`${group} [${attr}]`).forEach(b=>b.classList.toggle("active",b.getAttribute(attr)===String(value)))}
+$("#grades").addEventListener("click",e=>{const b=e.target.closest("[data-grade]");if(!b)return;state.grade=+b.dataset.grade;updateActive("#grades","data-grade",state.grade)});
+$("#subjects").addEventListener("click",e=>{const b=e.target.closest("[data-subject]");if(!b)return;state.subject=b.dataset.subject;updateActive("#subjects","data-subject",state.subject);refreshTopics()});
+$("#counts").addEventListener("click",e=>{const b=e.target.closest("[data-count]");if(!b)return;state.count=+b.dataset.count;updateActive("#counts","data-count",state.count)});
+function shuffle(a){for(let i=a.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function buildQuestions(){
+ const topic=$("#topic").value,diff=$("#difficulty").value;
+ let pool=bank.filter(q=>q.g===state.grade&&q.s===state.subject&&(topic==="all"||q.t===topic)&&(diff==="mixed"||q.d===diff));
+ if(!pool.length)pool=bank.filter(q=>q.g===state.grade&&q.s===state.subject&&(topic==="all"||q.t===topic));
+ // Expand a modest bank safely by reshuffling and cycling, so 50/100-question sessions work.
+ let out=[];while(out.length<state.count){out.push(...shuffle(pool.slice()))}return out.slice(0,state.count).map(q=>({...q,opts:q.opts.slice()}));
+}
+$("#start").addEventListener("click",()=>{
+ state.count=state.count||20;state.questions=buildQuestions();state.index=0;state.answers={};state.flagged=new Set();state.mode=$("#mode").value;state.limit=+$("#timer").value;state.remaining=state.limit*60;state.started=Date.now();state.finished=false;
+ $("#setup").classList.add("hidden");$("#results").classList.add("hidden");$("#practice").classList.remove("hidden");
+ $("#sessionLabel").textContent=`Grade ${state.grade} · ${subjectNames[state.subject]}`;$("#practiceTitle").textContent=state.mode==="instant"?"Learning mode":"Exam mode";
+ $("#examHint").textContent=state.mode==="exam"?"Exam mode: explanations appear after you submit. You can move between questions.":"Choose an answer to see feedback and learn the method.";
+ if(state.tick)clearInterval(state.tick);renderQuestion();renderClock();
+ if(state.limit)state.tick=setInterval(()=>{state.remaining--;renderClock();if(state.remaining<=0)finish(true)},1000);
+});
+function renderClock(){if(!state.limit){$("#clock").textContent="No timer";return}const n=Math.max(0,state.remaining),m=Math.floor(n/60),s=n%60;$("#clock").textContent=`${String(m).padStart(2,"0")}:${String(s).padStart(2,"0")}`;$("#clock").style.background=n<=60?"#ffe7e7":"#fff3cf";$("#clock").style.color=n<=60?"#a32e2e":"#765200"}
+function renderQuestion(){
+ const q=state.questions[state.index],saved=state.answers[state.index];$("#qNumber").textContent=`Question ${state.index+1} of ${state.questions.length}`;$("#answeredCount").textContent=`${Object.keys(state.answers).length} answered`;$("#progressBar").style.width=`${((state.index+1)/state.questions.length)*100}%`;$("#questionText").textContent=q.q;
+ $("#answers").innerHTML="";q.opts.forEach((opt,i)=>{const b=document.createElement("button");b.className="answer";if(saved&&saved.choice===i)b.classList.add("selected");if(state.mode==="instant"&&saved){if(i===q.a)b.classList.add("correct");else if(i===saved.choice)b.classList.add("wrong")}const letter=document.createElement("span");letter.className="letter";letter.textContent=String.fromCharCode(65+i);const txt=document.createElement("span");txt.textContent=opt;b.append(letter,txt);b.disabled=!!saved&&state.mode==="instant";b.addEventListener("click",()=>choose(i));$("#answers").append(b)});
+ $("#feedback").classList.add("hidden");if(saved&&state.mode==="instant")showFeedback(q,saved.choice);
+ $("#prev").disabled=state.index===0;$("#next").textContent=state.index===state.questions.length-1?(state.mode==="exam"?"Submit test":"See results"):"Next →";$("#flag").textContent=state.flagged.has(state.index)?"★ Marked for review":"☆ Mark for review";
+}
+function choose(i){if(state.finished)return;if(state.mode==="instant"&&state.answers[state.index])return;state.answers[state.index]={choice:i};if(state.mode==="instant")showFeedback(state.questions[state.index],i);renderQuestion();if(state.mode==="instant")showFeedback(state.questions[state.index],i)}
+function showFeedback(q,i){const el=$("#feedback");el.classList.remove("hidden","good","bad");const good=i===q.a;el.classList.add(good?"good":"bad");el.innerHTML=`<h3>${good?"✓ That's correct!":"Not quite — keep learning."}</h3><p><strong>Answer: ${escapeHtml(q.opts[q.a])}.</strong> ${escapeHtml(q.exp)}</p>`}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+$("#prev").addEventListener("click",()=>{if(state.index>0){state.index--;renderQuestion()}});
+$("#next").addEventListener("click",()=>{if(state.index<state.questions.length-1){state.index++;renderQuestion()}else if(state.mode==="exam"){const blank=state.questions.length-Object.keys(state.answers).length;if(blank>0&&!confirm(`You have ${blank} unanswered question(s). Submit anyway?`))return;finish(false)}else finish(false)});
+$("#flag").addEventListener("click",()=>{if(state.flagged.has(state.index))state.flagged.delete(state.index);else state.flagged.add(state.index);$("#flag").textContent=state.flagged.has(state.index)?"★ Marked for review":"☆ Mark for review"});
+function finish(timeout){if(state.finished)return;state.finished=true;if(state.tick)clearInterval(state.tick);$("#practice").classList.add("hidden");$("#results").classList.remove("hidden");const total=state.questions.length,correct=state.questions.reduce((n,q,i)=>n+(state.answers[i]?.choice===q.a?1:0),0),pct=Math.round(correct/total*100),elapsed=Math.max(0,Math.floor((Date.now()-state.started)/1000));$("#scoreStat").textContent=pct+"%";$("#correctStat").textContent=`${correct}/${total}`;$("#timeStat").textContent=`${Math.floor(elapsed/60)}:${String(elapsed%60).padStart(2,"0")}`;$("#resultSubtitle").textContent=`Grade ${state.grade} · ${subjectNames[state.subject]} · ${timeout?"Time is up.": "Practice complete."}`;
+ $("#learningTip").textContent=pct>=90?"Excellent work! Try a harder difficulty or a new topic to keep growing.":pct>=70?"Good progress. Review the questions you missed, then try another round to strengthen your skills.":"Every mistake is useful information. Read the explanations, practise one topic at a time, and try again.";
+ const topicCounts={};state.questions.forEach((q,i)=>{topicCounts[q.t]??={right:0,total:0};topicCounts[q.t].total++;if(state.answers[i]?.choice===q.a)topicCounts[q.t].right++});$("#topicStats").innerHTML=Object.entries(topicCounts).map(([t,v])=>`<span>${escapeHtml(t)}: ${v.right}/${v.total}</span>`).join("");
+ $("#review").innerHTML="";state.questions.forEach((q,i)=>{const a=state.answers[i]?.choice,ok=a===q.a;const d=document.createElement("div");d.className="review-item";d.innerHTML=`<h4><span class="tag ${ok?"good":"bad"}">${ok?"Correct":"Review"}</span> Question ${i+1} · ${escapeHtml(q.t)}</h4><p><strong>${escapeHtml(q.q)}</strong></p><p class="muted">Your answer: ${a===undefined?"Not answered":escapeHtml(q.opts[a])}</p><p><strong>Correct answer:</strong> ${escapeHtml(q.opts[q.a])}</p><p>${escapeHtml(q.exp)}</p>`;$("#review").append(d)});
+ try{const old=JSON.parse(localStorage.getItem("brightpath-history")||"[]");old.unshift({date:new Date().toISOString(),grade:state.grade,subject:state.subject,score:pct,total,elapsed});localStorage.setItem("brightpath-history",JSON.stringify(old.slice(0,30)))}catch(e){}
+}
+$("#retryWrong").addEventListener("click",()=>{const missed=state.questions.filter((q,i)=>state.answers[i]?.choice!==q.a);if(!missed.length){alert("Wonderful — you got every question correct! Choose a new practice session to keep learning.");return}state.questions=shuffle(missed).map(q=>({...q,opts:q.opts.slice()}));state.count=state.questions.length;state.index=0;state.answers={};state.flagged=new Set();state.mode="instant";state.limit=0;state.remaining=0;state.started=Date.now();state.finished=false;$("#results").classList.add("hidden");$("#practice").classList.remove("hidden");$("#sessionLabel").textContent=`Grade ${state.grade} · Review missed questions`;$("#practiceTitle").textContent="Retry round";$("#examHint").textContent="Review round: instant feedback is on and the timer is off.";if(state.tick)clearInterval(state.tick);renderQuestion();renderClock()});
+$("#print").addEventListener("click",()=>window.print());
+$("#home").addEventListener("click",()=>{if(state.tick)clearInterval(state.tick);$("#results").classList.add("hidden");$("#practice").classList.add("hidden");$("#setup").classList.remove("hidden")});
+refreshTopics();
+</script>
+</body>
+</html>
